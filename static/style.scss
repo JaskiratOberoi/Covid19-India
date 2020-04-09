@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: "Inria Sans", sans-serif;
+}
+
+body {
+  background-color: #f1f1f1;
+  color: #1f1f1f;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem 0;
+  .heading {
+    text-align: center;
+    font-size: 1.6rem;
+    // font-weight: 600;
+    margin-left: 10%;
+    text-transform: uppercase;
+    font-family: "Lato", sans-serif;
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px rgba(99, 164, 255, 0.2);
+    background-color: rgb(99, 164, 255);
+    background-image: linear-gradient(315deg, #63a4ff 0%, #83cef1 74%);
+    color: #f1f1f1;
+  }
+
+  &::after {
+    content: "BETA";
+    background-color: #ff0000;
+    color: #f1f1f1;
+    border-radius: 5px;
+    position: relative;
+    font-size: 1rem;
+    top: -30px;
+    right: 30px;
+    padding: 0.2rem 0.5rem;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  .date,
+  .confirmed,
+  .active,
+  .recovered,
+  .death {
+    padding: 1rem 3rem;
+    width: 70%;
+    margin: 0.3rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    text-align: center;
+
+    .data {
+      font-size: 2rem;
+    }
+  }
+
+  p {
+    .actives {
+      color: red;
+    }
+
+    .deceased {
+      color: rgb(134, 134, 134);
+    }
+
+    .recovery {
+      color: rgb(2, 199, 2);
+    }
+  }
+}
+
+footer.foot {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: "center";
+}
