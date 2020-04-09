@@ -37,7 +37,7 @@ header {
 
   &::after {
     content: "BETA";
-    background-color: #ff0000;
+    background-color: #ff3b3b;
     color: #f1f1f1;
     border-radius: 5px;
     position: relative;
@@ -82,7 +82,7 @@ header {
 
   p {
     .actives {
-      color: red;
+      color: #ff3b3b;
     }
 
     .deceased {
