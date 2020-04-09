@@ -86,11 +86,9 @@ header::after {
   color: #02c702;
 }
 
-footer.foot {
-  position: fixed;
+footer {
+  position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  text-align: "center";
+  width: 100vw;
+  text-align: center;
 }
