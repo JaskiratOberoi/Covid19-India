@@ -91,7 +91,8 @@ header::after {
 }
 
 footer {
-  position: absolute;
+  position: relative;
+  margin-top: 20px;
   bottom: 0;
   width: 100vw;
   text-align: center;
