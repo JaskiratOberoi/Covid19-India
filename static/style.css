@@ -106,6 +106,9 @@ footer {
 }
 
 @media all and (min-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
   header .heading {
     font-size: 2rem;
     margin-left: 4%;
@@ -119,6 +122,7 @@ footer {
   .content .date {
     margin: 1rem;
     font-size: 1.5rem;
+    text-align: center;
   }
   .content .date .dates {
     font-size: 1.5rem;
@@ -138,8 +142,5 @@ footer {
   footer {
     position: relative;
     margin-top: 10rem;
-    bottom: 10px;
-    width: 100vw;
-    text-align: center;
   }
 }
