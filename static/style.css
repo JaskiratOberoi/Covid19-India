@@ -57,7 +57,15 @@ header::after {
   height: 100%;
 }
 
-.content .date,
+.content .date {
+  margin: 1rem;
+  font-size: 1.2rem;
+}
+
+.content .date .dates {
+  font-size: 1.5rem;
+}
+
 .content .confirmed,
 .content .active,
 .content .recovered,
@@ -70,7 +78,6 @@ header::after {
   text-align: center;
 }
 
-.content .date .data,
 .content .confirmed .data,
 .content .active .data,
 .content .recovered .data,
