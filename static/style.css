@@ -141,6 +141,7 @@ footer {
   }
   footer {
     position: relative;
+    padding: 0 0.5rem;
     margin-top: 10%;
   }
 }
