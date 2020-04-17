@@ -19,7 +19,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 95%;
   padding: 2rem 0;
   .heading {
     text-align: center;
@@ -37,94 +37,58 @@ header {
 
 .content {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 95%;
-  height: 100%;
+  height: auto;
 
   .date {
-    margin: 1rem;
+    margin: 1rem auto;
     font-size: 1.2rem;
     .dates {
       font-size: 1.5rem;
     }
   }
+  .total-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .confirmed,
+    .active,
+    .recovered,
+    .death {
+      padding: 1rem 2.5rem;
+      width: 70%;
+      margin: 0.3rem;
+      background-color: rgb(255, 255, 255);
+      border-radius: 10px;
+      text-align: center;
 
-  .confirmed,
-  .active,
-  .recovered,
-  .death {
-    padding: 1rem 3rem;
-    width: 70%;
-    margin: 0.3rem;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    text-align: center;
-
-    .data {
-      font-size: 2rem;
-    }
-  }
-
-  p {
-    .actives {
-      color: #ff3b3b;
-    }
-
-    .deceased {
-      color: rgb(134, 134, 134);
+      .data {
+        font-size: 2rem;
+      }
     }
 
-    .recovery {
-      color: rgb(2, 199, 2);
+    p {
+      .actives {
+        color: #ff3b3b;
+      }
+
+      .deceased {
+        color: rgb(134, 134, 134);
+      }
+
+      .recovery {
+        color: rgb(2, 199, 2);
+      }
     }
   }
 }
 
 .stats-table {
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-  height: auto;
-  justify-content: center;
-  align-items: center;
-  table.main-table {
-    background: #fff;
-    border-radius: 10px;
-    padding: 1rem 1rem;
-    thead.table-header {
-      tr {
-        th {
-          padding: 1rem;
-          padding-top: 0;
-          font-size: 1.5rem;
-          &:nth-child(2) {
-            color: rgb(26, 134, 223);
-          }
-          &:nth-child(3) {
-            color: #ff3b3b;
-          }
-          &:nth-child(4) {
-            color: rgb(134, 134, 134);
-          }
-          &:nth-child(5) {
-            color: rgb(2, 199, 2);
-          }
-        }
-      }
-    }
-    tbody.table-body {
-      tr {
-        td {
-          text-align: center;
-          &:first-child {
-            text-align: left;
-          }
-        }
-      }
-    }
-  }
+  display: none;
 }
 
 footer .foot {
@@ -144,20 +108,22 @@ footer .foot {
 // media queries for desktop
 
 @media all and (min-width: 600px) {
+  * {
+    font-size: 12px;
+  }
   body {
     overflow-x: hidden;
   }
   header {
     .heading {
       font-size: 2rem;
-      margin-left: 4%;
       padding: 1rem 3rem;
       padding-left: 5rem;
     }
   }
 
   .content {
-    width: 40%;
+    width: 50%;
     font-size: 1.5rem;
     .date {
       margin: 1rem;
@@ -167,17 +133,66 @@ footer .foot {
         font-size: 1.5rem;
       }
     }
-
-    .confirmed,
-    .active,
-    .recovered,
-    .death {
-      font-size: 2rem;
-      .data {
-        font-size: 2.2rem;
+    .total-stats {
+      display: none;
+      .confirmed,
+      .active,
+      .recovered,
+      .death {
+        font-size: 2rem;
+        .data {
+          font-size: 2.2rem;
+        }
       }
     }
   }
+  .stats-table {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+    table.main-table {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1rem 1rem;
+      thead.table-header {
+        tr {
+          th {
+            padding: 1rem;
+            padding-top: 0;
+            font-size: 1.5rem;
+            font-weight: 600;
+            &:nth-child(2) {
+              color: rgb(26, 134, 223);
+            }
+            &:nth-child(3) {
+              color: #ff3b3b;
+            }
+            &:nth-child(4) {
+              color: rgb(134, 134, 134);
+            }
+            &:nth-child(5) {
+              color: rgb(2, 199, 2);
+            }
+          }
+        }
+      }
+      tbody.table-body {
+        tr {
+          td {
+            text-align: center;
+            &:first-child {
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+
   footer {
     position: relative;
 

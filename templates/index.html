@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Covid 19 India</title>
     <link rel="stylesheet" href="../static/style.css" />
-    <link rel="shortcut icon" href="../media/virus2.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="../static/media/virus2.png"
+      type="image/x-icon"
+    />
     <link
       href="https://fonts.googleapis.com/css?family=Lato&display=swap"
       rel="stylesheet"
@@ -22,46 +26,48 @@
       </div>
     </header>
 
-    <!-- <div class="content">
+    <div class="content">
       <div class="date">
         <p>Latest Statistics as of <br /></p>
 
         <div class="dates">{{ lastUpdate }}</div>
       </div>
-      <div class="confirmed">
-        <p>Confirmed Cases</p>
-        <div class="data">{{ caseData[0]["confirmed"] }}</div>
-      </div>
 
-      <div class="active">
-        <p><span class="actives">Active</span></p>
-        <div class="data">{{ caseData[0]["active"] }}</div>
-      </div>
+      <div class="total-stats">
+        <div class="confirmed">
+          <p>Confirmed Cases</p>
+          <div class="data">{{ caseData[0]["confirmed"] }}</div>
+        </div>
 
-      <div class="death">
-        <p><span class="deceased">Deceased</span></p>
-        <div class="data">{{ caseData[0]["deaths"] }}</div>
-      </div>
+        <div class="active">
+          <p><span class="actives">Active</span></p>
+          <div class="data">{{ caseData[0]["active"] }}</div>
+        </div>
 
-      <div class="recovered">
-        <p><span class="recovery">Recovered</span></p>
-        <div class="data">{{ caseData[0]["recovered"] }}</div>
-      </div> -->
+        <div class="death">
+          <p><span class="deceased">Deceased</span></p>
+          <div class="data">{{ caseData[0]["deaths"] }}</div>
+        </div>
 
-      <div class="stats-table">
-        <table class="main-table">
-          <thead class="table-header">
-            <tr>
-              <th>State</th>
-              <th>Confirmed</th>
-              <th>Active</th>
-              <th>Deceased</th>
-              <th>Recovered</th>
-            </tr>
-          </thead>
-          <tbody class="table-body"></tbody>
-        </table>
+        <div class="recovered">
+          <p><span class="recovery">Recovered</span></p>
+          <div class="data">{{ caseData[0]["recovered"] }}</div>
+        </div>
       </div>
+    </div>
+    <div class="stats-table">
+      <table class="main-table">
+        <thead class="table-header">
+          <tr>
+            <th>State</th>
+            <th>Confirmed</th>
+            <th>Active</th>
+            <th>Deceased</th>
+            <th>Recovered</th>
+          </tr>
+        </thead>
+        <tbody class="table-body"></tbody>
+      </table>
     </div>
     <footer class="foot">
       <a href="https://www.linkedin.com/in/jaskiratoberoi/">

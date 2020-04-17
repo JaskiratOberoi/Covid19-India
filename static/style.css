@@ -19,7 +19,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 95%;
   padding: 2rem 0;
 }
 
@@ -38,15 +38,15 @@ header .heading {
 
 .content {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 95%;
-  height: 100%;
+  height: auto;
 }
 
 .content .date {
-  margin: 1rem;
+  margin: 1rem auto;
   font-size: 1.2rem;
 }
 
@@ -54,11 +54,18 @@ header .heading {
   font-size: 1.5rem;
 }
 
-.content .confirmed,
-.content .active,
-.content .recovered,
-.content .death {
-  padding: 1rem 3rem;
+.content .total-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .total-stats .confirmed,
+.content .total-stats .active,
+.content .total-stats .recovered,
+.content .total-stats .death {
+  padding: 1rem 2.5rem;
   width: 70%;
   margin: 0.3rem;
   background-color: white;
@@ -66,68 +73,27 @@ header .heading {
   text-align: center;
 }
 
-.content .confirmed .data,
-.content .active .data,
-.content .recovered .data,
-.content .death .data {
+.content .total-stats .confirmed .data,
+.content .total-stats .active .data,
+.content .total-stats .recovered .data,
+.content .total-stats .death .data {
   font-size: 2rem;
 }
 
-.content p .actives {
+.content .total-stats p .actives {
   color: #ff3b3b;
 }
 
-.content p .deceased {
+.content .total-stats p .deceased {
   color: #868686;
 }
 
-.content p .recovery {
+.content .total-stats p .recovery {
   color: #02c702;
 }
 
 .stats-table {
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-  height: auto;
-  justify-content: center;
-  align-items: center;
-}
-
-.stats-table table.main-table {
-  background: #fff;
-  border-radius: 10px;
-  padding: 1rem 1rem;
-}
-
-.stats-table table.main-table thead.table-header tr th {
-  padding: 1rem;
-  padding-top: 0;
-  font-size: 1.5rem;
-}
-
-.stats-table table.main-table thead.table-header tr th:nth-child(2) {
-  color: #1a86df;
-}
-
-.stats-table table.main-table thead.table-header tr th:nth-child(3) {
-  color: #ff3b3b;
-}
-
-.stats-table table.main-table thead.table-header tr th:nth-child(4) {
-  color: #868686;
-}
-
-.stats-table table.main-table thead.table-header tr th:nth-child(5) {
-  color: #02c702;
-}
-
-.stats-table table.main-table tbody.table-body tr td {
-  text-align: center;
-}
-
-.stats-table table.main-table tbody.table-body tr td:first-child {
-  text-align: left;
+  display: none;
 }
 
 footer .foot {
@@ -145,17 +111,19 @@ footer .foot a {
 }
 
 @media all and (min-width: 600px) {
+  * {
+    font-size: 12px;
+  }
   body {
     overflow-x: hidden;
   }
   header .heading {
     font-size: 2rem;
-    margin-left: 4%;
     padding: 1rem 3rem;
     padding-left: 5rem;
   }
   .content {
-    width: 40%;
+    width: 50%;
     font-size: 1.5rem;
   }
   .content .date {
@@ -166,17 +134,58 @@ footer .foot a {
   .content .date .dates {
     font-size: 1.5rem;
   }
-  .content .confirmed,
-.content .active,
-.content .recovered,
-.content .death {
+  .content .total-stats {
+    display: none;
+  }
+  .content .total-stats .confirmed,
+.content .total-stats .active,
+.content .total-stats .recovered,
+.content .total-stats .death {
     font-size: 2rem;
   }
-  .content .confirmed .data,
-.content .active .data,
-.content .recovered .data,
-.content .death .data {
+  .content .total-stats .confirmed .data,
+.content .total-stats .active .data,
+.content .total-stats .recovered .data,
+.content .total-stats .death .data {
     font-size: 2.2rem;
+  }
+  .stats-table {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+  }
+  .stats-table table.main-table {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1rem 1rem;
+  }
+  .stats-table table.main-table thead.table-header tr th {
+    padding: 1rem;
+    padding-top: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .stats-table table.main-table thead.table-header tr th:nth-child(2) {
+    color: #1a86df;
+  }
+  .stats-table table.main-table thead.table-header tr th:nth-child(3) {
+    color: #ff3b3b;
+  }
+  .stats-table table.main-table thead.table-header tr th:nth-child(4) {
+    color: #868686;
+  }
+  .stats-table table.main-table thead.table-header tr th:nth-child(5) {
+    color: #02c702;
+  }
+  .stats-table table.main-table tbody.table-body tr td {
+    text-align: center;
+  }
+  .stats-table table.main-table tbody.table-body tr td:first-child {
+    text-align: left;
   }
   footer {
     position: relative;
