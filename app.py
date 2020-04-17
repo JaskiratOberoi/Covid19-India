@@ -16,7 +16,8 @@ def index():
     LastUpdate = data["statewise"][0]["lastupdatedtime"]
     month = int(LastUpdate[4:5])
     UpdateDate = LastUpdate[:2] + " " + calendar.month_name[month] + " " + LastUpdate[6:10] + " " + LastUpdate[11:13] + ":00Hrs"
-    return render_template('index.html', totalConfirmed = TotalConfirmed, totalActive = TotalActive, totalDeaths = TotalDeaths, totalRecovered = TotalRecovered, lastUpdate = UpdateDate)
+    # caseData = json.dumps(data["statewise"])
+    return render_template('index.html', caseData = data['statewise'], lastUpdate = LastUpdate)
   
 
 if __name__ == '__main__':

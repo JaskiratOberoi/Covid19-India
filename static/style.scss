@@ -12,6 +12,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100vw;
 }
 
 header {
@@ -23,8 +24,6 @@ header {
   .heading {
     text-align: center;
     font-size: 1.6rem;
-    // font-weight: 600;
-    margin-left: 10%;
     text-transform: uppercase;
     font-family: "Lato", sans-serif;
     padding: 0.5rem 1.5rem;
@@ -34,23 +33,11 @@ header {
     background-image: linear-gradient(315deg, #4e98ff 0%, #40b9f1 74%);
     color: #f1f1f1;
   }
-
-  &::after {
-    content: "BETA";
-    background-color: #ff3b3b;
-    color: #f1f1f1;
-    border-radius: 5px;
-    position: relative;
-    font-size: 1rem;
-    top: -30px;
-    right: 30px;
-    padding: 0.2rem 0.5rem;
-  }
 }
 
 .content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   width: 95%;
@@ -91,6 +78,51 @@ header {
 
     .recovery {
       color: rgb(2, 199, 2);
+    }
+  }
+}
+
+.stats-table {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  table.main-table {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1rem 1rem;
+    thead.table-header {
+      tr {
+        th {
+          padding: 1rem;
+          padding-top: 0;
+          font-size: 1.5rem;
+          &:nth-child(2) {
+            color: rgb(26, 134, 223);
+          }
+          &:nth-child(3) {
+            color: #ff3b3b;
+          }
+          &:nth-child(4) {
+            color: rgb(134, 134, 134);
+          }
+          &:nth-child(5) {
+            color: rgb(2, 199, 2);
+          }
+        }
+      }
+    }
+    tbody.table-body {
+      tr {
+        td {
+          text-align: center;
+          &:first-child {
+            text-align: left;
+          }
+        }
+      }
     }
   }
 }

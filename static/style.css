@@ -12,6 +12,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100vw;
 }
 
 header {
@@ -25,7 +26,6 @@ header {
 header .heading {
   text-align: center;
   font-size: 1.6rem;
-  margin-left: 10%;
   text-transform: uppercase;
   font-family: "Lato", sans-serif;
   padding: 0.5rem 1.5rem;
@@ -36,21 +36,9 @@ header .heading {
   color: #f1f1f1;
 }
 
-header::after {
-  content: "BETA";
-  background-color: #ff3b3b;
-  color: #f1f1f1;
-  border-radius: 5px;
-  position: relative;
-  font-size: 1rem;
-  top: -30px;
-  right: 30px;
-  padding: 0.2rem 0.5rem;
-}
-
 .content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   width: 95%;
@@ -95,6 +83,51 @@ header::after {
 
 .content p .recovery {
   color: #02c702;
+}
+
+.stats-table {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.stats-table table.main-table {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem 1rem;
+}
+
+.stats-table table.main-table thead.table-header tr th {
+  padding: 1rem;
+  padding-top: 0;
+  font-size: 1.5rem;
+}
+
+.stats-table table.main-table thead.table-header tr th:nth-child(2) {
+  color: #1a86df;
+}
+
+.stats-table table.main-table thead.table-header tr th:nth-child(3) {
+  color: #ff3b3b;
+}
+
+.stats-table table.main-table thead.table-header tr th:nth-child(4) {
+  color: #868686;
+}
+
+.stats-table table.main-table thead.table-header tr th:nth-child(5) {
+  color: #02c702;
+}
+
+.stats-table table.main-table tbody.table-body tr td {
+  text-align: center;
+}
+
+.stats-table table.main-table tbody.table-body tr td:first-child {
+  text-align: left;
 }
 
 footer .foot {
